@@ -30,7 +30,7 @@ app = Flask(__name__)
 
 
 @app.route('/api/questions', methods=['POST'])
-def questions_request():
+def questions_request() -> List[dict]:
     questions_num: int = int(request.json['questions_num'])
 
     while True:
